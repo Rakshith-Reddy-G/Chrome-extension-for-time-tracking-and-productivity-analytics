@@ -92,3 +92,4 @@ Include a reset button in the popup to clear time data.
  
  ### output screen :
  
+![Image](https://github.com/user-attachments/assets/fb680a03-09b0-4cbb-b2e1-02ece7865227)
