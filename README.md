@@ -16,105 +16,75 @@
 
 This extension helps track the time spent on different websites by monitoring user activity in Chrome tabs. It logs the time spent per domain and displays it in a popup for easy access. Below is a detailed description of the tools, resources, libraries, and the expected output:
 
-**Tools Used**
+### Tools Used
 
-Google Chrome:
+Google Chrome: Browser required to run and test the Chrome extension.
 
-Browser required to run and test the Chrome extension.
+Visual Studio Code (VS Code): Code editor used to write and manage the extension files.
 
-Visual Studio Code (VS Code):
+Chrome Developer Tools: For debugging the extension, viewing logs, and testing the extension’s behavior.
 
-Code editor used to write and manage the extension files.
+Chrome Extensions Platform: Provides the APIs (chrome.tabs, chrome.storage) used to monitor and log website activity.
 
-Chrome Developer Tools:
+### Resources
 
-For debugging the extension, viewing logs, and testing the extension’s behavior.
+Manifest File (manifest.json): Defines the extension's metadata, permissions, and the services used.
 
-Chrome Extensions Platform:
-
-Provides the APIs (chrome.tabs, chrome.storage) used to monitor and log website activity.
-
-**Resources**
-
-Manifest File (manifest.json):
-
-Defines the extension's metadata, permissions, and the services used.
-
-JavaScript Files:
+**JavaScript Files**:
 
 background.js: Tracks active tab changes and logs the time spent on each website.
 
 popup.js: Displays the stored time data dynamically in the popup.
 
-HTML and CSS:
+**HTML and CSS**:
 
 popup.html: Provides the user interface (UI) to display the tracked data.
 
 Inline CSS: Styles the popup table for a clean and simple look.
 
-Chrome API Documentation:
-
-Used for implementing APIs like chrome.tabs and chrome.storage.
+Chrome API Documentation: Used for implementing APIs like chrome.tabs and chrome.storage.
 
 Documentation: Chrome Extension APIs
 
-**Libraries**
+### Libraries
 
-Features
+**Features**
 
-Time Tracking:
-
-Tracks the total time spent on each domain (e.g., google.com, facebook.com).
+Time Tracking: Tracks the total time spent on each domain (e.g., google.com, facebook.com).
 
 Updates the time dynamically as users switch or close tabs.
 
-User Interface:
+User Interface: Provides a simple popup displaying a table of websites and the time spent on each.
 
-Provides a simple popup displaying a table of websites and the time spent on each.
+Data Persistence: Stores time data using chrome.storage.local, allowing data to persist across browser sessions.
 
-Data Persistence:
-
-Stores time data using chrome.storage.local, allowing data to persist across browser sessions.
-
-Dynamic Updates:
-
-Automatically logs and updates the time as the user navigates different websites or switches tabs.
+Dynamic Updates: Automatically logs and updates the time as the user navigates different websites or switches tabs.
 
 **Output**
 
- Popup UI:
- 
-Displays the tracked time in a tabular format for easy readability.
+ Popup UI: Displays the tracked time in a tabular format for easy readability.
 
 The popup loads dynamically and updates in real-time.
 
-Console Logs:
-
-Debugging information is logged in the Chrome Developer Console, showing real-time tracking and updates.
+Console Logs: Debugging information is logged in the Chrome Developer Console, showing real-time tracking and updates.
 
 ### How It Works :
 
-Background Script:
-
-Listens to tab activation (chrome.tabs.onActivated) and URL changes (chrome.tabs.onUpdated).
+Background Script: Listens to tab activation (chrome.tabs.onActivated) and URL changes (chrome.tabs.onUpdated).
 
 Tracks the active website and calculates the time spent using timestamps.
 
 Stores the time data in Chrome’s local storage.
 
-Popup Script:
-
-Fetches stored time data from local storage.
+Popup Script: Fetches stored time data from local storage.
 
 Dynamically updates the popup table to display the websites and their corresponding time spent.
 
-Extension Interface:
-
-Users can click the extension icon in the toolbar to view the tracked time in the popup.
+Extension Interface: Users can click the extension icon in the toolbar to view the tracked time in the popup.
 
 Possible Enhancements
 
-Advanced Features:
+### Advanced Features:
 
 Add daily/weekly reports of website usage.
 
